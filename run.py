@@ -56,3 +56,29 @@ while number_mistakes < number_mistakes_allowed:
     print('Guesses left: {}'.format(number_mistakes_allowed - number_mistakes))
     letter_user = input('Enter a letter --> ')
 
+    # checks if the letter already been guessed
+
+    while letter_user in letters_guessed or letter_user in wrong_letters:
+        print()
+        print('You have already entered this letter, enter another one')
+        letter_user = input('Enter a letter --> ')
+
+    if letter_user not in letters_word:
+        number_mistakes += 1
+        wrong_letters.append(letter_user)
+
+    print()
+    print('Word: ', end='')
+
+# loop all the letters in a word
+for letter in letters_word:
+        if letter_user == letter:
+            letters_guessed.append(letter_user)
+    
+    for letter in letters_word:
+        if letter in letters_guessed:
+            print(letter + ' ', end='')
+        else:
+            print('_ ', end='')
+
+    print()
