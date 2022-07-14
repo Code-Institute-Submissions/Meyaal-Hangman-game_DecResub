@@ -1,30 +1,25 @@
 import random
-from words import word_list
+from words import word_list 
 
-
-def get_word():
+def welcome_user():
     """
-    function to make a random choice from the word_list
+    This function allows user to input their name.
+    user cannot use numbers
+    username must have characters only
     """
-    word = random.choice(word_list)
-    return word.upper()
+    username = None
 
-# create a play function for users and a while loop
+    while True:
+        username = input('Enter your name\n')
 
-def play(word):
-    """
-   create a play function for users and a while loop inside it
-    """
+        if not username.isalpha():
+            print('Username must be alphabets only')
+            continue
+        else:
+            print('welcome '+username)
+            break
 
-    word_completion = "_" * len(word)
-    guessed = False
-    guessed_letters = []
-    guessed_words = []
-    tries = 6
-    print("Play Hangman!")
-    print(display_hangman(tries))
-    print(word_completion)
-    print("\n")
 
-    # a loop with three possible conditional branches for different user inputs
-    # if/else block to guess a letter or a word
+print('Welcome to Hangman')
+welcome_user()
+
