@@ -75,6 +75,18 @@ for letter in letters_word:
         if letter_user == letter:
             letters_guessed.append(letter_user)
     
+for letter in letters_word:
+        if letter in letters_guessed:
+            print(letter + ' ', end='')
+        else:
+            print('_ ', end='')
+
+print()
+
+for letter in letters_word:
+    if letter_user == letter:
+      letters_guessed.append(letter_user)
+    
     for letter in letters_word:
         if letter in letters_guessed:
             print(letter + ' ', end='')
@@ -82,3 +94,17 @@ for letter in letters_word:
             print('_ ', end='')
 
     print()
+
+if number_mistakes:
+        print(hangman_graphics[number_mistakes - 1])
+print()
+print('-------------------------------------------')
+
+if len(letters_guessed) == len(letters_word):
+    print()
+    print('YOU WOOOON!!!')
+
+
+if number_mistakes == number_mistakes_allowed:
+    print()
+    print('YOU LOST! TRY AGAIN!')
