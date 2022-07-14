@@ -32,4 +32,18 @@ def get_word():
     return word.upper()
 
 
+def play(word):
+    """
+    function to collect letters guessed by the user
+    """
+    word_completion = "_" * len(word)
+    guessed = False
+    guessed_letters = []
+    guessed_words = []
+    tries = 6
+    print("Let's play Hangman!")
+    print(display_hangman(tries))
+    print(word_completion)
+    print("\n")
+
 
