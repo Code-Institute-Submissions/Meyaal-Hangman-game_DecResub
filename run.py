@@ -1,5 +1,5 @@
 import random
-from word import word_list
+from words import word_list
 
 def welcome_user():
     """
@@ -23,4 +23,5 @@ def welcome_user():
 
 print('Welcome to Hangman')
 welcome_user()
+
 
