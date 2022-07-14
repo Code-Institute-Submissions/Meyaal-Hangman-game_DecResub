@@ -1,3 +1,7 @@
+
+"""
+file with hangman structure
+"""
 hangman_graphics = ['_',
                     '__',
                     '__\n |',
