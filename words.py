@@ -1,5 +1,5 @@
 word_list = [
-    "happy",  
+    "happy", 
     "sommar", 
     "vacation", 
     "sea", 
