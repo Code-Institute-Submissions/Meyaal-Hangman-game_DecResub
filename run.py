@@ -2,6 +2,7 @@ import random
 from word import words
 from hangman_structure import hangman_graphics
 
+
 def welcome_user():
     """
     This function allows user to type
@@ -38,14 +39,11 @@ number_mistakes = 0
 letters_guessed = []
 number_mistakes_allowed = len(hangman_graphics)
 word = random.choice(words)
-letters_word = list(word) 
+letters_word = list(word)
 wrong_letters = []
 
 print()
 print('The word has {} letters'.format(len(letters_word)))
-
-# the game will run until the number of misstakes is equal to number allowed
-# loop the list of wrong letters
 
 while number_mistakes < number_mistakes_allowed:
     print()
@@ -55,8 +53,6 @@ while number_mistakes < number_mistakes_allowed:
     print()
     print('Guesses left: {}'.format(number_mistakes_allowed - number_mistakes))
     letter_user = input('Enter a letter --> ')
-
-    # checks if the letter already been guessed
 
     while letter_user in letters_guessed or letter_user in wrong_letters:
         print()
@@ -70,23 +66,9 @@ while number_mistakes < number_mistakes_allowed:
     print()
     print('Word: ', end='')
 
-# loop all the letters in a word
-for letter in letters_word:
+    for letter in letters_word:
         if letter_user == letter:
             letters_guessed.append(letter_user)
-    
-for letter in letters_word:
-        if letter in letters_guessed:
-            print(letter + ' ', end='')
-        else:
-            print('_ ', end='')
-
-print()
-
-for letter in letters_word:
-    if letter_user == letter:
-      letters_guessed.append(letter_user)
-    
     for letter in letters_word:
         if letter in letters_guessed:
             print(letter + ' ', end='')
@@ -94,16 +76,15 @@ for letter in letters_word:
             print('_ ', end='')
 
     print()
-
-if number_mistakes:
+    if number_mistakes:
         print(hangman_graphics[number_mistakes - 1])
-print()
-print('-------------------------------------------')
-
-if len(letters_guessed) == len(letters_word):
     print()
-    print('YOU WOOOON!!!')
+    print('-------------------------------------------')
 
+    if len(letters_guessed) == len(letters_word):
+        print()
+        print('YOU WOOOON!!!')
+        break
 
 if number_mistakes == number_mistakes_allowed:
     print()
