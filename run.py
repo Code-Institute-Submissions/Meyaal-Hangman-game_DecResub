@@ -35,11 +35,6 @@ welcome_user()
 # let the user knows how many letters
 
 
-import random
-from word import words
-from hangman_structure import hangman_graphics
-
-
 def welcome_user():
     """
     This function allows user to type
