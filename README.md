@@ -1,14 +1,11 @@
 ## Hangman game 
 
-
-
-### This game is a word game where the goal is to guess the word by selecting different letters until the word is complete. The user is presented with a number of blank spaces representing the missing letters that they will need to find. This game was created to complete the second Milestone Project for Code Insitute's Full Stack Software Developer course.
+#### This game is a word game where the goal is to guess the word by selecting different letters until the word is complete. The user is presented with a number of blank spaces representing the missing letters that they will need to find. This game was created to complete the second Milestone Project for Code Insitute's Full Stack Software Developer course.
 
 #### Live Site [Here](https://meys-game.herokuapp.com/)
 
 inline-style
 ![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.31.46.png)
-
 #### How to play
 
 * The user need to enter their name and once entered, the user will be presented with the number of letters in the word and blank spaces for each letter.
@@ -17,9 +14,7 @@ inline-style
 * If the letter the user choses, exists in the answer, then all the blank spaces, where that letter exists, will be populated with that letter.
 * The user have nine tries.
 * If the user cannot guess the word and exceeds the lives, the hangman will be completed and the game will be over.
-
 ## Features
-
 The game features a welcome message to the user and when the user starts the game, it will ask the user to type their name. The username must be letters only, if the user puts a number, an error message with appear instructing the user that the name must be letters only.
 
 inline-style
@@ -41,16 +36,11 @@ inline-style
 ![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.39.47.png)
 
 * If the letter guessed by the user is incorrect, the hangman picture will be populated piece by piece, starting from head to the legs. Also, the wrong letter will be displayed to the user. If the user selects a letter that has already been chosen, the following message will appear "You already guessed it, please try again". The following screenshot displays the message. A list with already chosen and wrong letters appears so the user knows wich letters they already choosed.
-
 inline-style
 ![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.42.07.png)
-
 * If the user is unable to guess the word in 9 attempts, the hangman will be completed and the user will lose the game. To replay the game, the user will need to click on run the program and the game will restart.
-
 inline-style
-![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.48.39.png)
-
-* If the user can guess the word, the user will receive a congratulations message and they will win the game.
+![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.48.39.png)* If the user can guess the word, the user will receive a congratulations message and they will win the game.
 
 ## Future features
 
