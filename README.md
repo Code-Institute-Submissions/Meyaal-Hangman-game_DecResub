@@ -75,6 +75,8 @@ I'll add a function that shows what the right word was in case the choice was wr
 
 ## Issues and bugs
 
+* When I play the game I discovered that it is difficult to guess the correct word. I do not know if it is bugs in code or what it may be due to.
+
 ## Validator Testing
 I ran through my file in [PEP8 Online](http://pep8online.com/)
 
@@ -126,7 +128,11 @@ Python NodeJS
 
 [Github](https://github.com/) Help with add function that welcomes users and ask them to type theirs name.
 
+## Special Thanks
 
+Specials thanks to Student Turtor Assistance for theirs patience and skills that made me complete this project. 
+
+A special thanks my mentor Martina Terlević for being there for me and allways give inspiration and support.
 
 
 
