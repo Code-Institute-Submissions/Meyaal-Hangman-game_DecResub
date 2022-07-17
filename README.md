@@ -1,8 +1,13 @@
 ## Hangman game 
 
+
+
 ### This game is a word game where the goal is to guess the word by selecting different letters until the word is complete. The user is presented with a number of blank spaces representing the missing letters that they will need to find. This game was created to complete the second Milestone Project for Code Insitute's Full Stack Software Developer course.
 
 #### Live Site [Here](https://meys-game.herokuapp.com/)
+
+inline-style
+![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.31.46.png)
 
 #### How to play
 
