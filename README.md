@@ -5,6 +5,7 @@
 #### Live Site [Here](https://meys-game.herokuapp.com/)
 
 ![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.31.46.png)
+
 #### How to play
 
 * The user need to enter their name and once entered, the user will be presented with the number of letters in the word and blank spaces for each letter.
