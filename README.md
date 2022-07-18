@@ -4,7 +4,6 @@
 
 #### Live Site [Here](https://meys-game.herokuapp.com/)
 
-inline-style
 ![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.31.46.png)
 #### How to play
 
@@ -17,30 +16,27 @@ inline-style
 ## Features
 The game features a welcome message to the user and when the user starts the game, it will ask the user to type their name. The username must be letters only, if the user puts a number, an error message with appear instructing the user that the name must be letters only.
 
-inline-style
 ![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.31.46.png)
 
 * When the user types their name, a hello message will appear displaying their name and the game will begin. The program will also display the number of letters in the word.
 
-inline-style
 ![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.34.08.png)
 
 If the letter guessed by the user matches any of the letters in the word, the letter will appear in the blank space where that letter belongs. In the following screenshot, the letter "a" was guessed and it appeared on the blank space.
 
-inline-style
 ![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.37.38.png)
 
 User can only guess a letter, if they use a number or a special character, then they will get an error message that they have to select a letter.
 
-inline-style
 ![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.39.47.png)
 
 * If the letter guessed by the user is incorrect, the hangman picture will be populated piece by piece, starting from head to the legs. Also, the wrong letter will be displayed to the user. If the user selects a letter that has already been chosen, the following message will appear "You already guessed it, please try again". The following screenshot displays the message. A list with already chosen and wrong letters appears so the user knows wich letters they already choosed.
-inline-style
+
 ![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.42.07.png)
 * If the user is unable to guess the word in 9 attempts, the hangman will be completed and the user will lose the game. To replay the game, the user will need to click on run the program and the game will restart.
-inline-style
-![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.48.39.png)* If the user can guess the word, the user will receive a congratulations message and they will win the game.
+![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.48.39.png)
+
+* If the user can guess the word, the user will receive a congratulations message and they will win the game.
 
 ## Future features
 
