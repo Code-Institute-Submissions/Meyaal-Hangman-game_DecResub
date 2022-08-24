@@ -1,6 +1,6 @@
 import random
 from word import words
-from hangman_structure import hangman_graphics
+from hangman_structure import get_hangman
 
 
 def welcome_user():
@@ -34,6 +34,7 @@ print("================================")
 correct_guess = ["_"] * len(random_word)
 # below is a list collect wrong letters guessed by the user
 incorrect_guess = []
+graphics = x
 
 def correct_guess_list():
     """
@@ -57,7 +58,7 @@ def letters_only():
             return user_input_letter 
 
 correct_guess_list()
-hangman_graphics(len(incorrect_guess))
+get_hangman(len(incorrect_guess))
 
 while True:
     user_input = letters_only()
@@ -72,7 +73,7 @@ while True:
     else:
         if user_input not in incorrect_guess:
             incorrect_guess.append(user_input)
-            hangman_graphics(len(incorrect_guess))
+            get_hangman(len(incorrect_guess))
             print(f'sorry, letter {user_input} is not in the word')
 
         else:
