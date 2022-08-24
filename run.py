@@ -45,7 +45,6 @@ alphabet = ('abcdefghijklmnopqrstuvwxyz')
 print()
 print('The word has {} letters'.format(len(letters_word)))
 
-
 while number_mistakes < number_mistakes_allowed:
     print()
     print('Wrong letters: ', end='')
@@ -61,6 +60,7 @@ while number_mistakes < number_mistakes_allowed:
         letter_user = input('Enter a letter --> ')
     if letter_user not in alphabet:
         print(' Make sure you enter an alphabet not a number')
+
     if letter_user not in letters_word:
         number_mistakes += 1
         wrong_letters.append(letter_user)
