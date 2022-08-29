@@ -1,6 +1,6 @@
 import random
 from word import words
-from hangman_structure import get_hangman
+from hangman_structure import hangman_graphics 
 
 
 def welcome_user():
@@ -26,65 +26,68 @@ def welcome_user():
 print('Welcome to Hangman')
 welcome_user()
 
-random_word = random.choice(words) # randomly chooses something from the list
-print(
-    "Hint: The word has", len(random_word), "letters")
-print("================================")
+# create some variables for the game
+# number of misstakes
+# number af letters guessed
+# use the structure to show how many tries left
+# let the user knows how many letters
+# choose random word from list
+# let the user knows how many letters
 
-correct_guess = ["_"] * len(random_word)
-# below is a list collect wrong letters guessed by the user
-incorrect_guess = []
-graphics = x
+number_mistakes = 0
+letters_guessed = []
+number_mistakes_allowed = len(hangman_graphics)
+word = random.choice(words)
+letters_word = list(word)
+wrong_letters = []
+tuple_valid_char = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
 
-def correct_guess_list():
-    """
-    the function will print the correct letters in the
-    correct_guess list
-    """
-    for letter in correct_guess:
-        print(letter, end=" ")
+
+
+print()
+print('The word has {} letters'.format(len(letters_word)))
+
+while number_mistakes < number_mistakes_allowed:
     print()
+    print('Wrong letters: ', end='')
+    for letter in wrong_letters:
+        print('{}, '.format(letter), end='')
+    print()
+    print('Guesses left: {}'.format(number_mistakes_allowed - number_mistakes))
+    letter_user = input('Enter a letter --> ')
 
-def letters_only():
-    """
-    this function will validate input from users
-    only letters and no character or numbers
-    """
-    while True:
-        user_input_letter = input("type a letter: \n").lower()
-        if not user_input_letter.isalpha():
-            print('Error, please select a letter')
+    while letter_user in letters_guessed or letter_user in wrong_letters:
+        print()
+        print('You have already entered this letter, enter another one')
+        letter_user = input('Enter a letter --> ')
+
+    if letter_user not in letters_word:
+        number_mistakes += 1
+        wrong_letters.append(letter_user)
+
+    print()
+    print('Word: ', end='')
+
+    for letter in letters_word:
+        if letter_user == letter:
+            letters_guessed.append(letter_user)
+    for letter in letters_word:
+        if letter in letters_guessed:
+            print(letter + ' ', end='')
         else:
-            return user_input_letter 
+            print('_ ', end='')
 
-correct_guess_list()
-get_hangman(len(incorrect_guess))
+    print()
+    if number_mistakes:
+        print(hangman_graphics[number_mistakes - 1])
+    print()
+    print('-------------------------------------------')
 
-while True:
-    user_input = letters_only()
-    if user_input in random_word:
-        INDEX = 0
-        for i in random_word:
-            if i == user_input:
-                correct_guess[INDEX] = user_input
-            INDEX += 1
-        correct_guess_list()
-
-    else:
-        if user_input not in incorrect_guess:
-            incorrect_guess.append(user_input)
-            get_hangman(len(incorrect_guess))
-            print(f'sorry, letter {user_input} is not in the word')
-
-        else:
-            print("You already guessed it, please try again...")
-        print(incorrect_guess)
-
-    if len(incorrect_guess) > 5:
-        print("You lose, please try again")
-        print("correct word is ", random_word)
+    if len(letters_guessed) == len(letters_word):
+        print()
+        print('YOU WOOOON!!!')
         break
 
-    if "_" not in correct_guess:
-        print("Congratulations!!!, you have guessed the correct letter")
-        break
+if number_mistakes == number_mistakes_allowed:
+    print()
+    print('YOU LOST! TRY AGAIN!')
