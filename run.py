@@ -23,3 +23,16 @@ def welcome_user():
         else:
             print('welcome '+username)
             break
+def get_input() -> str:
+
+    result = ""
+    ok = False
+    while ok != True:
+        result = input('Enter a letter --> ') 
+        ok = validate.validate(result)
+        if ok: 
+            break
+    return result
+
+# Client program
+def HangmanClient() -> None:
