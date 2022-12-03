@@ -36,3 +36,27 @@ def get_input() -> str:
 
 # Client program
 def HangmanClient() -> None:
+    number_mistakes = 0 
+    letters_guessed = [] 
+    number_mistakes_allowed = len(hangman_graphics) 
+
+    word = random.choice(words) 
+    letters_word = list(word) 
+    wrong_letters = [] 
+
+    print('Welcome to Hangman')
+    welcome_user()
+
+    print() # För att kunna testa -> visa ordet
+    print('The word has {} letters'.format(len(letters_word))) 
+
+    while number_mistakes < number_mistakes_allowed:   
+        print() 
+        print('Wrong letters: ', end='')
+        for letter in wrong_letters: 
+            print('{}, '.format(letter), end='') 
+        
+        print() 
+        print('Guesses left: {}'.format(number_mistakes_allowed - number_mistakes)) 
+        
+        
