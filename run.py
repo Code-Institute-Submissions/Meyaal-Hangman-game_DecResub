@@ -59,4 +59,40 @@ def HangmanClient() -> None:
         print() 
         print('Guesses left: {}'.format(number_mistakes_allowed - number_mistakes)) 
         
+        letter_user = get_input() 
+        while letter_user in letters_guessed or letter_user in wrong_letters:
+            
+            print() 
+            print('You have already entered this letter, enter another one') 
+            #letter_user = input('Enter a letter --> ') 
+
+            letter_user = get_input()  # Ny input
+
+        if letter_user not in letters_word: 
+            number_mistakes += 1 
+            wrong_letters.append(letter_user) 
+
+        print() 
+        print('Word: ', end='') 
+    
+        for letter in letters_word: 
+            if letter_user == letter: 
+                letters_guessed.append(letter_user)
+
+        for letter in letters_word: # Behövs den här loopen? Om inte, varför?
+            if letter in letters_guessed: 
+                print(letter + ' ', end='') 
+            else: 
+                print('_ ', end='') 
+
+        print() 
+
+        if number_mistakes: 
+            print(hangman_graphics[number_mistakes - 1]) 
+
+        if len(letters_word) == len(letters_guessed): # När vi har hela ordet, avbryt
+            break
         
+    print() 
+    print('-------------------------------------------') 
+    print() 
