@@ -31,7 +31,7 @@ def get_input() -> str:
     result = ""
     ok = False
     while ok is not True:
-        result = input('Enter a letter -->')
+        result = input('Enter a letter --> ')
         ok = validate.validate(result)
         if ok:
             break
