@@ -71,9 +71,8 @@ I resubmitt this project because my previous code didn't have the ability to val
 ## Validator Testing
 I ran through my file in [](https://pep8ci.herokuapp.com/)
 
-The Code has warnings and I tried to rectify these but did not mange to remove all spaces and extra lines. I should learn a way to fix them. 
-![alt text](doc/Ska%CC%88rmavbild%202022-12-09%20kl.%2010.48.58.png) ![alt text](doc/Ska%CC%88rmavbild%202022-12-09%20kl.%2010.49.08.png)
-![alt text](doc/Ska%CC%88rmavbild%202022-12-09%20kl.%2010.49.15.png)
+The Code has warnings and I did rectify these.
+![alt text](doc/Ska%CC%88rmavbild%202022-12-09%20validate.png) 
 
 
 ## Deployment
