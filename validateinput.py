@@ -1,8 +1,7 @@
 import re
 
+
 class ValidateInput():
-    
-    
     __pattern = "[a-zA-Z]$"
 
     __ok = "OK"
@@ -11,9 +10,7 @@ class ValidateInput():
     def __init__(self):
         pass
 
-
     def validate(self, value):
-        
         if re.match(self.__pattern, value):
             print(self.__ok)
             return True
