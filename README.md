@@ -31,11 +31,8 @@ User can only guess a letter, if they use a number or a special character, then 
 
 ![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.39.47.png)
 
-* If the letter guessed by the user is incorrect, the hangman picture will be populated piece by piece, starting from head to the legs. Also, the wrong letter will be displayed to the user. If the user selects a letter that has already been chosen, the following message will appear "You already guessed it, please try again". The following screenshot displays the message. A list with already chosen and wrong letters appears so the user knows wich letters they already choosed.
-
-![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.42.07.png)
-* If the user is unable to guess the word in 9 attempts, the hangman will be completed and the user will lose the game. To replay the game, the user will need to click on run the program and the game will restart.
-![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.48.39.png)
+* If the letter guessed by the user is incorrect, the hangman picture will be populated piece by piece, starting from head to the legs. Also, the wrong letter will be displayed to the user. If the user selects a letter that has already been chosen, the following message will appear "You already guessed it, please try again". The following screenshot displays the message. A list with already chosen and wrong letters appears so the user knows wich letters they already choosed.![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.42.07.png)
+* If the user is unable to guess the word in 9 attempts, the hangman will be completed and the user will lose the game. To replay the game, the user will need to click on run the program and the game will restart.![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.48.39.png)
 
 * If the user can guess the word, the user will receive a congratulations message and they will win the game.
 
@@ -69,8 +66,12 @@ I'll add a function that shows what the right word was in case the choice was wr
 
 * When I play the game I discovered that it is difficult to guess the correct word. I do not know if it is bugs in code or what it may be due to.
 
+## Fixed bugs
+
+I resubmitt this project because my previous code didn't have the ability to validate all types of inputs like characters and empty inputs. This also caused users to lose lives when they typed wrong inputs. Now it is fixed and in the event of incorrect entries, users are notified that "Invalid code, please enter again" ![alt text](doc/invalid.png)
+
 ## Validator Testing
-I ran through my file in [PEP8 Online](http://pep8online.com/)
+I ran through my file in [](http://pep8online.com/)
 
 The Code has one warning, I tried to fix that but I couldn't find or see the newline presented in the warning. 
 
