@@ -15,12 +15,10 @@
 * The user have nine tries.
 * If the user cannot guess the word and exceeds the lives, the hangman will be completed and the game will be over.
 ## Features
-The game features a welcome message to the user and when the user starts the game, it will ask the user to type their name. The username must be letters only, if the user puts a number, an error message with appear instructing the user that the name must be letters only.
-
+The game features a welcome message to the user and when the user starts the game, it will ask the user to type their name. The username must be letters only, if the user puts a number, an error message with appear instructing the user that the name must be letters only 
 ![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.31.46.png)
 
 * When the user types their name, a hello message will appear displaying their name and the game will begin. The program will also display the number of letters in the word.
-
 ![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2006.34.08.png)
 
 If the letter guessed by the user matches any of the letters in the word, the letter will appear in the blank space where that letter belongs. In the following screenshot, the letter "a" was guessed and it appeared on the blank space.
@@ -71,9 +69,12 @@ I'll add a function that shows what the right word was in case the choice was wr
 I resubmitt this project because my previous code didn't have the ability to validate all types of inputs like characters and empty inputs. This also caused users to lose lives when they typed wrong inputs. Now it is fixed and in the event of incorrect entries, users are notified that "Invalid code, please enter again" ![alt text](doc/invalid.png)
 
 ## Validator Testing
-I ran through my file in [](http://pep8online.com/)
+I ran through my file in [](https://pep8ci.herokuapp.com/)
 
-The Code has one warning, I tried to fix that but I couldn't find or see the newline presented in the warning. 
+The Code has warnings and I tried to rectify these but did not mange to remove all spaces and extra lines. I should learn a way to fix them. 
+![alt text](doc/)
+
+
 
 inline-style
 ![alt text](doc/Ska%CC%88rmavbild%202022-07-17%20kl.%2007.05.04.png)
